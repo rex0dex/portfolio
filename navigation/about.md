@@ -106,7 +106,7 @@ Every school I have gone to has been in Poway Unified, so I have basically grown
 When I am not in school or on the court, I am usually watching something or playing something. Here is the lineup.
 
 <comment>
-Logos are pulled from Wikimedia Commons, same  as the flags above.
+Logos are the real show and game logos, pulled from Wikimedia the same way as the flags above.
 </comment>
 
 <style>
@@ -157,17 +157,19 @@ Logos are pulled from Wikimedia Commons, same  as the flags above.
     var fandomContainer = document.getElementById("fandom_grid");
 
     // 2. Data rows: one object per show or game
-    var commons = "https://upload.wikimedia.org/wikipedia/commons/";
+    // Base is the shared prefix; each row carries its own repo folder after it,
+    // because free logos live under "commons/" and non-free ones under "en/".
+    var wikimedia = "https://upload.wikimedia.org/wikipedia/";
     var fandoms = [
-        {"logo": "2/2f/Stranger_Things_logo.svg",                              "name": "Stranger Things",  "tag": "Series"},
-        {"logo": "a/a9/Loki_TV_Series_Logo_Black.svg",                         "name": "Loki",             "tag": "Series"},
-        {"logo": "6/6c/One_piece_logo.svg",                                    "name": "One Piece",        "tag": "Anime"},
-        {"logo": "1/1c/Attack_on_Titan_%28international_anglophone%29_logo.svg","name": "Attack on Titan",  "tag": "Anime"},
-        {"logo": "c/c9/Naruto_logo.svg",                                       "name": "Naruto",           "tag": "Anime"},
-        {"logo": "1/1f/Hunter_%C3%97_Hunter_logo.png",                         "name": "Hunter x Hunter",  "tag": "Anime"},
-        {"logo": "1/12/Spider-Man_video_game_series_logo.png",                 "name": "Spider-Man",       "tag": "Game - Insomniac"},
-        {"logo": "a/a0/Fortnite_logo_2.svg",                                   "name": "Fortnite",         "tag": "Game"},
-        {"logo": "4/4b/Roblox_Logo_2022.svg",                                  "name": "Roblox",           "tag": "Game"},
+        {"logo": "commons/3/38/Stranger_Things_logo.png",                                          "name": "Stranger Things", "tag": "Series"},
+        {"logo": "en/4/4e/Loki_%28TV_series%29_logo.png",                                          "name": "Loki",            "tag": "Series"},
+        {"logo": "commons/6/6c/One_piece_logo.svg",                                                "name": "One Piece",       "tag": "Anime"},
+        {"logo": "commons/1/1c/Attack_on_Titan_%28international_anglophone%29_logo.svg",           "name": "Attack on Titan", "tag": "Anime"},
+        {"logo": "commons/c/c9/Naruto_logo.svg",                                                   "name": "Naruto",          "tag": "Anime"},
+        {"logo": "commons/1/1f/Hunter_%C3%97_Hunter_logo.png",                                     "name": "Hunter x Hunter", "tag": "Anime"},
+        {"logo": "commons/2/25/Marvel%27s_Spider-Man_2_%282025%29_logo_official_%28SGDB_124347%29.png", "name": "Spider-Man 2", "tag": "Game - Insomniac"},
+        {"logo": "commons/0/0e/FortniteLogo.svg",                                                  "name": "Fortnite",        "tag": "Game"},
+        {"logo": "commons/4/4b/Roblox_Logo_2022.svg",                                              "name": "Roblox",          "tag": "Game"},
     ];
 
     // 3. Build a card inside the container for each row of data
@@ -178,7 +180,7 @@ Logos are pulled from Wikimedia Commons, same  as the flags above.
 
         // Add "img" HTML tag for the logo
         var logo = document.createElement("img");
-        logo.src = commons + item.logo;      // concatenate the source and the logo path
+        logo.src = wikimedia + item.logo;    // concatenate the source and the logo path
         logo.alt = item.name + " logo";      // alt text for accessibility
         logo.loading = "lazy";               // do not block page load on 9 images
 
