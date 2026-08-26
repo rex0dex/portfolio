@@ -203,12 +203,11 @@ Logos are pulled from Wikimedia Commons, same  as the flags above.
 })();
 </script>
 
-**The short version of my taste:** long  anime where it is over 400 episodes, sci-fi shows with a group of friends at the center, and games I can hop into with those same friends. One Piece and Hunter x Hunter are the ones I will actually argue about. Spider-Man 2 on PS5 is the one I have replayed the most — swinging around that map never gets old.
+**The short version of my taste:** long  anime where it is over 400 episodes, sci-fi shows with a group of friends at the center, and games I can hop into with those same friends. One Piece and Hunter x Hunter are the ones I love the most. Spider-Man 2 on PS5 is the one I have replayed the most — swinging around that map never gets old.
 
 ### What I Am Working On
 
 - Building out this portfolio in the Computer Science class at Del Norte
-- Getting better at JavaScript, which is what draws every grid on this page
 - Trying to make the badminton varsity  this season
 
 
