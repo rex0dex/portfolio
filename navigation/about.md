@@ -113,36 +113,20 @@ Logos are the real show and game logos, pulled from Wikimedia the same way as th
     .fandom-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 12px;
+        gap: 28px 20px;
+        align-items: center;
     }
-    .fandom-card {
-        background: #f4f4f6;               /* light plate so dark logos stay readable in dark mode */
-        border-radius: 10px;
-        padding: 14px 10px 10px 10px;
-        text-align: center;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .fandom-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
-    }
-    .fandom-card img {
+    .fandom-grid img {
         width: 100%;
-        height: 70px;
+        height: 80px;
         object-fit: contain;                /* letterbox instead of crop, logos are all different shapes */
+        transition: transform 0.2s ease;
     }
-    .fandom-card .fandom-name {
-        margin: 10px 0 2px 0;
-        font-weight: 700;
-        font-size: 0.9rem;
-        color: #111;
+    .fandom-grid img:hover {
+        transform: scale(1.08);
     }
-    .fandom-card .fandom-tag {
-        margin: 0;
-        font-size: 0.75rem;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #666;
+    .fandom-grid img.invert {
+        filter: invert(1);                  /* the site skin is dark, so flip all-black logos to white */
     }
 </style>
 
@@ -156,51 +140,35 @@ Logos are the real show and game logos, pulled from Wikimedia the same way as th
     // 1. Connect to the HTML container defined in the div
     var fandomContainer = document.getElementById("fandom_grid");
 
-    // 2. Data rows: one object per show or game
+    // 2. Data rows: one logo path plus the name, which is used for the alt text
     // Base is the shared prefix; each row carries its own repo folder after it,
     // because free logos live under "commons/" and non-free ones under "en/".
     var wikimedia = "https://upload.wikimedia.org/wikipedia/";
     var fandoms = [
-        {"logo": "commons/3/38/Stranger_Things_logo.png",                                          "name": "Stranger Things", "tag": "Series"},
-        {"logo": "en/4/4e/Loki_%28TV_series%29_logo.png",                                          "name": "Loki",            "tag": "Series"},
-        {"logo": "commons/6/6c/One_piece_logo.svg",                                                "name": "One Piece",       "tag": "Anime"},
-        {"logo": "commons/1/1c/Attack_on_Titan_%28international_anglophone%29_logo.svg",           "name": "Attack on Titan", "tag": "Anime"},
-        {"logo": "commons/c/c9/Naruto_logo.svg",                                                   "name": "Naruto",          "tag": "Anime"},
-        {"logo": "commons/1/1f/Hunter_%C3%97_Hunter_logo.png",                                     "name": "Hunter x Hunter", "tag": "Anime"},
-        {"logo": "commons/2/25/Marvel%27s_Spider-Man_2_%282025%29_logo_official_%28SGDB_124347%29.png", "name": "Spider-Man 2", "tag": "Game - Insomniac"},
-        {"logo": "commons/0/0e/FortniteLogo.svg",                                                  "name": "Fortnite",        "tag": "Game"},
-        {"logo": "commons/4/4b/Roblox_Logo_2022.svg",                                              "name": "Roblox",          "tag": "Game"},
+        {"logo": "commons/2/2f/Stranger_Things_logo.svg",                                               "name": "Stranger Things"},
+        {"logo": "en/4/4e/Loki_%28TV_series%29_logo.png",                                               "name": "Loki"},
+        {"logo": "commons/6/6c/One_piece_logo.svg",                                                     "name": "One Piece"},
+        {"logo": "commons/1/1c/Attack_on_Titan_%28international_anglophone%29_logo.svg",                "name": "Attack on Titan"},
+        {"logo": "commons/c/c9/Naruto_logo.svg",                                                        "name": "Naruto"},
+        {"logo": "commons/1/1f/Hunter_%C3%97_Hunter_logo.png",                                          "name": "Hunter x Hunter"},
+        {"logo": "commons/2/25/Marvel%27s_Spider-Man_2_%282025%29_logo_official_%28SGDB_124347%29.png", "name": "Spider-Man 2"},
+        {"logo": "commons/0/0e/FortniteLogo.svg",                                                       "name": "Fortnite", "invert": true},
+        {"logo": "commons/6/6c/Roblox_Logo.svg",                                                        "name": "Roblox"},
     ];
 
-    // 3. Build a card inside the container for each row of data
+    // 3. Build an image inside the container for each row of data
     for (const item of fandoms) {
-        // Create a "div" with "class fandom-card" for each row
-        var card = document.createElement("div");
-        card.className = "fandom-card";
-
         // Add "img" HTML tag for the logo
         var logo = document.createElement("img");
         logo.src = wikimedia + item.logo;    // concatenate the source and the logo path
-        logo.alt = item.name + " logo";      // alt text for accessibility
+        logo.alt = item.name + " logo";      // the only place the name still appears, for screen readers
         logo.loading = "lazy";               // do not block page load on 9 images
+        if (item.invert) {                   // only set on logos that are solid black
+            logo.classList.add("invert");
+        }
 
-        // Add "p" HTML tag for the title
-        var name = document.createElement("p");
-        name.className = "fandom-name";
-        name.textContent = item.name;
-
-        // Add "p" HTML tag for the anime / series / game label
-        var tag = document.createElement("p");
-        tag.className = "fandom-tag";
-        tag.textContent = item.tag;
-
-        // Append the img and p tags to the card DIV
-        card.appendChild(logo);
-        card.appendChild(name);
-        card.appendChild(tag);
-
-        // Append the card DIV to the container DIV
-        fandomContainer.appendChild(card);
+        // Append the img straight to the container, no card wrapper
+        fandomContainer.appendChild(logo);
     }
 })();
 </script>
