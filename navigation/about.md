@@ -7,7 +7,7 @@ comments: true
 
 ## As a conversation Starter
 
-Here are some places I have lived.
+Here are the places that made me — where I live, where my family is from, and where I have been.
 
 <comment>
 Flags are made using Wikipedia images
@@ -34,18 +34,6 @@ Flags are made using Wikipedia images
         margin: 5px 0; /* Add some margin for spacing */
     }
 
-    .image-gallery {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 10px;
-        }
-
-    .image-gallery img {
-        max-height: 150px;
-        object-fit: cover;
-        border-radius: 5px;
-    }
 </style>
 
 <!-- This grid_container class is used by CSS styling and the id is used by JavaScript connection -->
@@ -62,8 +50,8 @@ Flags are made using Wikipedia images
     var living_in_the_world = [
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
         {"flag": "4/41/Flag_of_India.svg", "greeting": "Namaste", "description": "India - frequently visits"},
-        {"flag": "b/be/Flag_of_England.svg", "greeting": "Alright mate", "description": "England - 2 years"},
-        {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
+        {"flag": "8/88/Flag_of_Australia_%28converted%29.svg", "greeting": "G'day, mate!", "description": "Australia, visited my uncle once"},
+        {"flag": "4/48/Flag_of_Singapore.svg", "greeting": "Hello", "description": "Singapore, visited on the way to india (family lives there)"},
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -97,42 +85,130 @@ Flags are made using Wikipedia images
     }
 </script>
 
-### Journey through Life
 
-Here is what I did at those places
+### Journey through School
 
-- 🏫 Lots of Elementary Schools in Tucson, LA, Honolulu, and Glendale (CA)
-- 🏫 Middle and High School in Glendale (CA), Hoover High graduated '77
-- 🎓 Glendale CA Community College, UCLA Extension, LA Wilshire Computer Tech School '77 to '79
-- ⛪ England, London Missionary for Church of Jesus Christ of Latter-day Saints '79 to '81
-- 💼 Culver City, Glendale CA founder at Ashton-Tate, original PC's dBase 2 and 3 '82 to '87
-- 🎓 Eugene Oregon Undergraduate CompSci Degree at University of Oregon (Go Ducks!) '89 to '91
-- 💼 Eugene Oregon, founder and owner @ Microniche `88, Point Control CAD CAM developer '91 to '96
-- 🏢 San Diego CA Qualcomm, Satellite Comm and 1st Mobile OS (BREW) '96 to '19
-- 👨‍🏫 San Diego CA Teacher of Computer Science @ Del Norte High School San Diego '19 to present
+Every school I have gone to has been in Poway Unified, so I have basically grown up with the same group of friends.
 
-### Culture, Family, and Fun
+- 🎒 **Stone Ranch Elementary** — where it all started, TK through 5th grade
+- 🏫 **Oak Valley Middle School** — 6th through 8th grade, first real taste of computers and coding
+- 🏆 **Del Norte High School** — Class of '29, currently a sophomore
+- 💻 **Computer Science @ Del Norte** — the class this whole portfolio is being built for
 
-Everything for me, as for many others, revolves around family and faith.
+### On the Court
 
-- My mother told me that I was Danish, English. and Irish, here is my researched [family tree]({{site.baseurl}}/images/about/familytree.png)
-- My family is pretty big as I have been married twice, my 1st wife passed away.  We have had 5 kids, 4 adopted by me, 1 biological.  Plus, there are three grandkids.  My name to my grandkids is Abuilito.
-- The gallery of pics has some of my family, fun, culture and faith memories.
+🏸 I play **badminton for the Del Norte team**. It looks easy until you actually try to return a smash, the whole game happens in a space smaller than a tennis court. What I like about it is that it rewards being fast and being smart at the same time; you can beat someone who is stronger than you by putting the bird exactly where they are not.
+
+
+
+### At home
+
+When I am not in school or on the court, I am usually watching something or playing something. Here is the lineup.
 
 <comment>
-Gallery of Pics, scroll to the right for more ...
+Logos are pulled from Wikimedia Commons, same  as the flags above.
 </comment>
-<div class="image-gallery">
-  <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
-  <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
-  <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
-  <img src="{{site.baseurl}}/images/about/surf.jpg" alt="Image 4">
-  <img src="{{site.baseurl}}/images/about/john_lora.jpg" alt="Image 5">
-  <img src="{{site.baseurl}}/images/about/lora_fam.jpg" alt="Image 6">
-  <img src="{{site.baseurl}}/images/about/lora_fam2.jpg" alt="Image 7">
-  <img src="{{site.baseurl}}/images/about/pj_party.jpg" alt="Image 8">
-  <img src="{{site.baseurl}}/images/about/trent_family.png" alt="Image 9">
-  <img src="{{site.baseurl}}/images/about/claire.jpg" alt="Image 10">
-  <img src="{{site.baseurl}}/images/about/grandkids.jpg" alt="Image 11">
-  <img src="{{site.baseurl}}/images/about/farm.jpg" alt="Image 12">
+
+<style>
+    .fandom-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+    }
+    .fandom-card {
+        background: #f4f4f6;               /* light plate so dark logos stay readable in dark mode */
+        border-radius: 10px;
+        padding: 14px 10px 10px 10px;
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .fandom-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    }
+    .fandom-card img {
+        width: 100%;
+        height: 70px;
+        object-fit: contain;                /* letterbox instead of crop, logos are all different shapes */
+    }
+    .fandom-card .fandom-name {
+        margin: 10px 0 2px 0;
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: #111;
+    }
+    .fandom-card .fandom-tag {
+        margin: 0;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #666;
+    }
+</style>
+
+<div class="fandom-grid" id="fandom_grid">
+    <!-- content will be added here by JavaScript -->
 </div>
+
+<script>
+// Wrapped in an IIFE so these names do not collide with the flag script above
+(function () {
+    // 1. Connect to the HTML container defined in the div
+    var fandomContainer = document.getElementById("fandom_grid");
+
+    // 2. Data rows: one object per show or game
+    var commons = "https://upload.wikimedia.org/wikipedia/commons/";
+    var fandoms = [
+        {"logo": "2/2f/Stranger_Things_logo.svg",                              "name": "Stranger Things",  "tag": "Series"},
+        {"logo": "a/a9/Loki_TV_Series_Logo_Black.svg",                         "name": "Loki",             "tag": "Series"},
+        {"logo": "6/6c/One_piece_logo.svg",                                    "name": "One Piece",        "tag": "Anime"},
+        {"logo": "1/1c/Attack_on_Titan_%28international_anglophone%29_logo.svg","name": "Attack on Titan",  "tag": "Anime"},
+        {"logo": "c/c9/Naruto_logo.svg",                                       "name": "Naruto",           "tag": "Anime"},
+        {"logo": "1/1f/Hunter_%C3%97_Hunter_logo.png",                         "name": "Hunter x Hunter",  "tag": "Anime"},
+        {"logo": "1/12/Spider-Man_video_game_series_logo.png",                 "name": "Spider-Man",       "tag": "Game - Insomniac"},
+        {"logo": "a/a0/Fortnite_logo_2.svg",                                   "name": "Fortnite",         "tag": "Game"},
+        {"logo": "4/4b/Roblox_Logo_2022.svg",                                  "name": "Roblox",           "tag": "Game"},
+    ];
+
+    // 3. Build a card inside the container for each row of data
+    for (const item of fandoms) {
+        // Create a "div" with "class fandom-card" for each row
+        var card = document.createElement("div");
+        card.className = "fandom-card";
+
+        // Add "img" HTML tag for the logo
+        var logo = document.createElement("img");
+        logo.src = commons + item.logo;      // concatenate the source and the logo path
+        logo.alt = item.name + " logo";      // alt text for accessibility
+        logo.loading = "lazy";               // do not block page load on 9 images
+
+        // Add "p" HTML tag for the title
+        var name = document.createElement("p");
+        name.className = "fandom-name";
+        name.textContent = item.name;
+
+        // Add "p" HTML tag for the anime / series / game label
+        var tag = document.createElement("p");
+        tag.className = "fandom-tag";
+        tag.textContent = item.tag;
+
+        // Append the img and p tags to the card DIV
+        card.appendChild(logo);
+        card.appendChild(name);
+        card.appendChild(tag);
+
+        // Append the card DIV to the container DIV
+        fandomContainer.appendChild(card);
+    }
+})();
+</script>
+
+**The short version of my taste:** long  anime where it is over 400 episodes, sci-fi shows with a group of friends at the center, and games I can hop into with those same friends. One Piece and Hunter x Hunter are the ones I will actually argue about. Spider-Man 2 on PS5 is the one I have replayed the most — swinging around that map never gets old.
+
+### What I Am Working On
+
+- Building out this portfolio in the Computer Science class at Del Norte
+- Getting better at JavaScript, which is what draws every grid on this page
+- Trying to make the badminton varsity  this season
+
+
