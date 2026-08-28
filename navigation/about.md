@@ -178,13 +178,38 @@ Logos are the real show and game logos, pulled from Wikimedia the same way as th
 <comment>
 Gallery of Pics, scroll to the right for more ...
 </comment>
+<style>
+    /* Horizontal strip, same idea as the two grids above but one row that scrolls */
+    .image-gallery {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;                   /* the "scroll to the right for more" part */
+        overscroll-behavior-x: contain;     /* stop the scroll from grabbing the whole page */
+        scroll-snap-type: x mandatory;      /* snap so a photo never stops half off screen */
+        padding-bottom: 12px;               /* room for the scrollbar under the photos */
+        -webkit-overflow-scrolling: touch;  /* momentum scrolling on phones */
+    }
+    .image-gallery img {
+        height: 260px;
+        width: auto;                        /* let each photo keep its own aspect ratio */
+        flex: 0 0 auto;                     /* do not let flex squeeze them to fit */
+        object-fit: cover;
+        border-radius: 8px;
+        scroll-snap-align: start;
+        transition: transform 0.2s ease;
+    }
+    .image-gallery img:hover {
+        transform: scale(1.03);
+    }
+</style>
+
 <div class="image-gallery">
-  <img src="{{site.baseurl}}/images/about/IMG_3414.jpeg" alt="Image 1">
-  <img src="{{site.baseurl}}/images/about/IMG_3984.jpeg" alt="Image 2">
-  <img src="{{site.baseurl}}/images/about/IMG_4274.jpg" alt="Image 3">
-  <img src="{{site.baseurl}}/images/about/IMG_4308.jpg" alt="Image 4">
-  <img src="{{site.baseurl}}/images/about/IMG_4393.jpeg" alt="Image 5">
-  <img src="{{site.baseurl}}/images/about/FullSizeRender.jpg" alt="Image 6">
+  <img src="{{site.baseurl}}/images/about/IMG_3414.jpeg" alt="Image 1" loading="lazy">
+  <img src="{{site.baseurl}}/images/about/IMG_3984.jpeg" alt="Image 2" loading="lazy">
+  <img src="{{site.baseurl}}/images/about/IMG_4274.jpg" alt="Image 3" loading="lazy">
+  <img src="{{site.baseurl}}/images/about/IMG_4308.jpg" alt="Image 4" loading="lazy">
+  <img src="{{site.baseurl}}/images/about/IMG_4393.jpeg" alt="Image 5" loading="lazy">
+  <img src="{{site.baseurl}}/images/about/FullSizeRender.jpg" alt="Image 6" loading="lazy">
 </div>
 
 
