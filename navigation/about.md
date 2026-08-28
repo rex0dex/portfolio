@@ -175,9 +175,16 @@ Logos are the real show and game logos, pulled from Wikimedia the same way as th
 
 **The short version of my taste:** long  anime where it is over 400 episodes, sci-fi shows with a group of friends at the center, and games I can hop into with those same friends. One Piece and Hunter x Hunter are the ones I love the most. Spider-Man 2 on PS5 is the one I have replayed the most — swinging around that map never gets old.
 
-### What I Am Working On
-
-- Building out this portfolio in the Computer Science class at Del Norte
-- Trying to make the badminton varsity  this season
+<comment>
+Gallery of Pics, scroll to the right for more ...
+</comment>
+<div class="image-gallery">
+  <img src="{{site.baseurl}}/images/about/IMG_3414.jpeg" alt="Image 1">
+  <img src="{{site.baseurl}}/images/about/IMG_3984.jpeg" alt="Image 2">
+  <img src="{{site.baseurl}}/images/about/IMG_4274.heic" alt="Image 3">
+  <img src="{{site.baseurl}}/images/about/IMG_4308.heic" alt="Image 4">
+  <img src="{{site.baseurl}}/images/about/IMG_4393.jpeg" alt="Image 5">
+  <img src="{{site.baseurl}}/images/about/FullSizeRender.heic" alt="Image 6">
+</div>
 
 
