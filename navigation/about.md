@@ -181,10 +181,10 @@ Gallery of Pics, scroll to the right for more ...
 <div class="image-gallery">
   <img src="{{site.baseurl}}/images/about/IMG_3414.jpeg" alt="Image 1">
   <img src="{{site.baseurl}}/images/about/IMG_3984.jpeg" alt="Image 2">
-  <img src="{{site.baseurl}}/images/about/IMG_4274.heic" alt="Image 3">
-  <img src="{{site.baseurl}}/images/about/IMG_4308.heic" alt="Image 4">
+  <img src="{{site.baseurl}}/images/about/IMG_4274.jpg" alt="Image 3">
+  <img src="{{site.baseurl}}/images/about/IMG_4308.jpg" alt="Image 4">
   <img src="{{site.baseurl}}/images/about/IMG_4393.jpeg" alt="Image 5">
-  <img src="{{site.baseurl}}/images/about/FullSizeRender.heic" alt="Image 6">
+  <img src="{{site.baseurl}}/images/about/FullSizeRender.jpg" alt="Image 6">
 </div>
 
 
