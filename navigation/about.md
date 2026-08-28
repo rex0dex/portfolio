@@ -7,7 +7,7 @@ comments: true
 
 ## As a conversation Starter
 
-Here are the places that made me — where I live, where my family is from, and where I have been.
+Here are the places that made me — where I live, where my family is from, and where I have been. 
 
 <comment>
 Flags are made using Wikipedia images
@@ -173,7 +173,7 @@ Logos are the real show and game logos, pulled from Wikimedia the same way as th
 })();
 </script>
 
-**The short version of my taste:** long  anime where it is over 400 episodes, sci-fi shows with a group of friends at the center, and games I can hop into with those same friends. One Piece and Hunter x Hunter are the ones I love the most. Spider-Man 2 on PS5 is the one I have replayed the most — swinging around that map never gets old.
+**The short version of my taste:** long anime where it is over 400 episodes, sci-fi shows with a group of friends at the center, and games I can hop into with those same friends. One Piece and Hunter x Hunter are the shows I love the most. Spider-Man 2 on PS5 is the one I have replayed the most, swinging around that map never gets old.
 
 <comment>
 Gallery of Pics, scroll to the right for more ...
