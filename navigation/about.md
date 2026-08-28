@@ -75,7 +75,7 @@ Flags are made using Wikipedia images
         var greeting = document.createElement("p");
         greeting.textContent = location.greeting;  // extract the greeting
 
-        // Append img and p HTML tags to the grid item DIV
+        // Append img and p HTML  tags to the grid item DIV
         gridItem.appendChild(img);
         gridItem.appendChild(description);
         gridItem.appendChild(greeting);
@@ -178,7 +178,6 @@ Logos are the real show and game logos, pulled from Wikimedia the same way as th
 <comment>
 Gallery of Pics, scroll to the right for more ...
 </comment>
-
 <div class="image-gallery">
   <img src="{{site.baseurl}}/images/about/IMG_3414.jpeg" alt="Image 1">
   <img src="{{site.baseurl}}/images/about/IMG_3984.jpeg" alt="Image 2">
