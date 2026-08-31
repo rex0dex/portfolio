@@ -7,7 +7,7 @@ comments: true
 
 ## As a conversation Starter
 
-Here are the places that made me — where I live, where my family is from, and where I have been. 
+Here are the places that made me — where I live, where my family is from, and where I have been.
 
 <comment>
 Flags are made using Wikipedia images
